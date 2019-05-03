@@ -26,11 +26,8 @@ class Triangle
   end
   
   def valid?
+    self.side_lengths.all?{ |length| length > 0 } &&
     
-    is_valid = false
-    self.side_lengths.each do |side_length|
-      if 
-    end
   end
   
   class TriangleError < StandardError

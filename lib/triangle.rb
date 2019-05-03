@@ -13,7 +13,12 @@ class Triangle
     
     case self.side_lengths.length
       when 1 
-        
+        :equilateral
+      when 2 
+        :isosceles
+      when 3
+        :scalene
+      end
     
   end
   

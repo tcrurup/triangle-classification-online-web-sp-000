@@ -11,7 +11,7 @@ class Triangle
     #in the array of side_lengths. 1 unique is an equalaterial, 2 unique is an isoscele, and 
     #3 unique is a scalene
     
-    if self.side_lengths.all?{ |length| length > 0 }
+    if self.valid?
       case self.side_lengths.uniq.length
         when 1 
           :equilateral
@@ -26,11 +26,10 @@ class Triangle
   end
   
   def valid?
-    if self.side_lengths.all?{ |length| length > 0 }
-      self.side_lengths[0] + self.side_lengths[1] > self.side_lengths[2] &&
-      
-    end
-    
+    self.side_lengths.all?{ |length| length > 0 } 
+    self.side_lengths[0] + self.side_lengths[1] > self.side_lengths[2] &&
+    self.side_lengths[1] + self.side_lengths[2] > self.side_lengths[0] &&
+    self.side_lengths[2] + self.side_lengths[0] > self.side_lengths[1] 
   end
   
   class TriangleError < StandardError

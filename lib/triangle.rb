@@ -11,6 +11,7 @@ class Triangle
     #in the array of side_lengths. 1 unique is an equalaterial, 2 unique is an isoscele, and 
     #3 unique is a scalene
     
+    if self.side_lengths.all?
     case self.side_lengths.uniq.length
       when 1 
         :equilateral

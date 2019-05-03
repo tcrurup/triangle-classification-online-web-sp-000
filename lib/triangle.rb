@@ -18,7 +18,7 @@ class Triangle
         :isosceles
       when 3
         :scalene
-      end
+    end
     
   end
   

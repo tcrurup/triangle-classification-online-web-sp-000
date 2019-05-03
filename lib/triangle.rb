@@ -27,7 +27,7 @@ class Triangle
   
   def valid?
     if self.side_lengths.all?{ |length| length > 0 }
-      lengths[0] + lengths[1] > lengths[2] &&
+      self.side_lengths[0] + self.side_lengths[1] > self.side_lengths[2] &&
       
     end
     

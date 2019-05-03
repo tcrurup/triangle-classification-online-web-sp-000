@@ -7,7 +7,7 @@ class Triangle
   end
   
   def kind
-    
+    if self.side_lengths
   end
   
   
